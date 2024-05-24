@@ -1,0 +1,229 @@
+@font-face {
+    font-family: Nunito Sans;
+    src: url("files/NunitoSans_10pt-Bold.ttf");
+}
+@font-face {
+    font-family: Bobby Jones Soft;
+    src: url("files/Bobby-Jones-Soft.otf");
+}
+@font-face {
+    font-family: Norwester;
+    src: url("files/Norwester.otf");
+}
+#header {
+    background-color: #FE719F;
+}
+.navbar {
+    justify-content: start;
+    padding: 2vh;
+}
+.selected-tab {
+    background-color: white;
+    color: black !important;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-radius: 1vh;
+}
+#hamburger-menu-wrapper {
+    background-color: #FE719F;
+    padding: 1vw;
+    justify-content: space-around;
+    border-top: 1vw solid #FF4D87;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    max-height: 0;
+}
+.burger-button {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-size: 5vw;
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-height: 1080px) {
+    /*when it looks weird in fullscreen and u gotta change something*/
+    .search-bar-bgh {
+        width: 38% !important;
+    }
+}
+
+@media (min-height: 1180px) {
+    /*change stuff for ipads (why do u have to be so hard apple :\)*/
+    .search-bar-bgh {
+        width: 25% !important;
+    }
+}
+
+li {
+    font-family: Norwester !important;
+}
+
+@media (min-width: 1025px) {
+    /*Stuff here is med and above*/
+    .logo-bg {
+        height: 10.008vh;
+        width: 41.424vh;
+    }
+    .search-bar-bg {
+        margin: 1vh;
+        width: 45%;
+        font-size: 3.5vh;
+        border: 0.3vh solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-bg:focus {
+        border: 0.3vh solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-bg {
+        padding: 2vh;
+    }
+    .search-bg {
+        width: 10.8vh;
+        margin-left: -5.5vh;
+    }
+    .search-bg:hover {
+        cursor: pointer;
+    }
+    .tab-button-bg {
+        font-family: "Prompt", sans-serif;
+        font-weight: 300;
+        margin-left: 3vh;
+        font-size: 3vh;
+        text-decoration: none;
+        color: white;
+    }
+    .cart-button-bg {
+        width: 10.8vh;
+        cursor: pointer;
+        margin-left: 3vh;
+    }
+    .hider-bg {
+        display: none;
+    }
+    .d-change-bg {
+        display: flex;
+    }
+    .icon {
+        width: 15vh;
+        height: 15vh;
+    }
+    .categ-title {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #FF276E;
+        font-size: 5vh;
+    }
+    
+    .categ-content, li {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #FF276E;
+        font-size: 3vh;
+        margin-left: 5vh;
+        width: 40%;
+    }
+    .categ-wrapper {
+        margin-left: 2vh;
+    }
+    .categ-main {
+        margin-top: 3vh;
+        margin-left: 3vh;
+    }
+    .contact-bear {
+        width: 51.42vh;
+        height: 64.8vh;
+        margin-top: 3vh;
+        margin-right: 15vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    /*Stuff here is med and below*/
+    .logo-md {
+        height: 10.008vw;
+        width: 41.424vw;
+    }
+    .search-bar-md {
+        margin: 1vw;
+        width: 25%;
+        font-size: 3.5vw;
+        border: 0.3vw solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-md:focus {
+        border: 0.3vw solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-md {
+        padding: 2vw;
+    }
+    .search-md {
+        width: 10.8vw;
+        margin-left: -5.5vw;
+    }
+    .search-md:hover {
+        width: 11vw;
+        cursor: pointer;
+    }
+    .tab-button-md {
+        display: none;
+    }
+    .cart-button-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    #mobile-menu-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    .d-change-md {
+        display: block;
+    }
+    .icon {
+        width: 15vw;
+        height: 15vw;
+    }
+    .categ-title {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #FF276E;
+        font-size: 4vw;
+    }
+    
+    .categ-content, li {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #FF276E;
+        font-size: 2vw;
+        margin-left: 5vw;
+        width: 40%;
+    }
+    .categ-wrapper {
+        margin-left: 1vw;
+    }
+    .categ-main {
+        margin-top: 3vw;
+        margin-left: 3vw;
+    }
+    .contact-bear {
+        width: 51.42vw;
+        height: 64.8vw;
+        margin-top: 3vw;
+        margin-left: 25vw
+    }
+}

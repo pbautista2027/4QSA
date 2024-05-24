@@ -1,0 +1,331 @@
+@font-face {
+    font-family: Nunito Sans;
+    src: url("files/NunitoSans_10pt-Bold.ttf");
+}
+@font-face {
+    font-family: Bobby Jones Soft;
+    src: url("files/Bobby-Jones-Soft.otf");
+}
+@font-face {
+    font-family: Norwester;
+    src: url("files/Norwester.otf");
+}
+#header {
+    background-color: #FE719F;
+}
+.navbar {
+    justify-content: start;
+    padding: 2vh;
+}
+.selected-tab {
+    background-color: white;
+    color: black !important;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-radius: 1vh;
+}
+#hamburger-menu-wrapper {
+    background-color: #FE719F;
+    padding: 1vw;
+    justify-content: space-around;
+    border-top: 1vw solid #FF4D87;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    max-height: 0;
+}
+.burger-button {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-size: 5vw;
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ab3-wrapper {
+    justify-content: space-evenly;
+}
+@media (min-height: 1080px) {
+    /*when it looks weird in fullscreen and u gotta change something*/
+    .search-bar-bgh {
+        width: 38% !important;
+    }
+}
+
+@media (min-height: 1180px) {
+    /*change stuff for ipads (why do u have to be so hard apple :\)*/
+    .search-bar-bgh {
+        width: 25% !important;
+    }
+}
+
+
+
+@media (min-width: 1025px) {
+    /*Stuff here is med and above*/
+    .logo-bg {
+        height: 10.008vh;
+        width: 41.424vh;
+    }
+    .search-bar-bg {
+        margin: 1vh;
+        width: 45%;
+        font-size: 3.5vh;
+        border: 0.3vh solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-bg:focus {
+        border: 0.3vh solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-bg {
+        padding: 2vh;
+    }
+    .search-bg {
+        width: 10.8vh;
+        margin-left: -5.5vh;
+    }
+    .search-bg:hover {
+        cursor: pointer;
+    }
+    .tab-button-bg {
+        font-family: "Prompt", sans-serif;
+        font-weight: 300;
+        margin-left: 3vh;
+        font-size: 3vh;
+        text-decoration: none;
+        color: white;
+    }
+    .cart-button-bg {
+        width: 10.8vh;
+        cursor: pointer;
+        margin-left: 3vh;
+    }
+    .hider-bg {
+        display: none;
+    }
+    .d-change-bg {
+        display: flex;
+    }
+    .about-toys-bg {
+        width: 147.692308vh;
+        height: 60.7692308vh;
+    }
+    .ab3-cell-bg {
+        width: 80%;
+    }
+    .ab3-title-bg {
+        font-family: Bobby Jones Soft;
+        color: #FF0B5B;
+        font-size: 5vh;
+    }
+    .ab3-content-bg {
+        font-family: Nunito Sans;
+        font-size: 3vh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .star-divider-bg {
+        width: 76.8vh;
+        height: 3.76vh;
+        margin-top: 5vh;
+    }
+    .pink-star-bg {
+        width: 4.00576vh;
+        height: 3.8016vh;
+    }
+    .azil-name-bg {
+        width: 32vh; /* ÷ 25 ÷ 2 ÷ 1.2*/
+        height: 15.7vh;
+        margin-bottom: -8vh;
+        position: relative;
+        z-index: 1;
+    }
+    .paolo-name-bg {
+        width: 32vh; /* ÷ 25 ÷ 2 ÷ 1.2*/
+        height: 16vh;
+        margin-bottom: -8.3vh;
+        position: relative;
+        z-index: 1;
+    }
+    .ysa-name-bg {
+        width: 32vh; /* ÷ 25 ÷ 2 ÷ 1.2*/
+        height: 15.9333333vh;
+        margin-bottom: -8.3vh;
+        position: relative;
+        z-index: 1;
+    }
+    .contributer-bg {
+        width: 40vh;
+        height: 40vh;
+        border: 1.2vh solid #FF276E;
+        background-color: #FF276E;
+        border-radius: 1vh;
+    }
+    .m-change-bg {
+        margin-top: 5vh;
+    }
+    .contributer-contribution-bg {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #27C2FF;
+        text-shadow: #69d5ff 0.6vh 0px 0px;
+        font-size: 7vh;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .references-title-bg {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #FF0B5B;
+        text-shadow: #fea4c6 0.2vh 0px 0px;
+        font-size: 3vh;
+    }
+    .references-bg {
+        margin: 0;
+        font-family: Nunito Sans;
+        color: #FF0B5B;
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    /*Stuff here is med and below*/
+    .logo-md {
+        height: 10.008vw;
+        width: 41.424vw;
+    }
+    .search-bar-md {
+        margin: 1vw;
+        width: 25%;
+        font-size: 3.5vw;
+        border: 0.3vw solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-md:focus {
+        border: 0.3vw solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-md {
+        padding: 2vw;
+    }
+    .search-md {
+        width: 10.8vw;
+        margin-left: -5.5vw;
+    }
+    .search-md:hover {
+        width: 11vw;
+        cursor: pointer;
+    }
+    .tab-button-md {
+        display: none;
+    }
+    .cart-button-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    #mobile-menu-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    .d-change-md {
+        display: block;
+    }
+    .about-toys-md {
+        margin-top: 25px;
+        width: 73.846154vw;
+        height: 30.3846154;
+    }
+    .ab3-cell-md {
+        width: 100%;
+    }
+    .ab3-title-md {
+        font-family: Bobby Jones Soft;
+        color: #FF0B5B;
+        font-size: 5vw;
+    }
+    .ab3-content-md {
+        font-family: Nunito Sans;
+        font-size: 3vw;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .star-divider-md {
+        width: 76.8vw;
+        height: 3.76vw;
+        margin-top: 5vw;
+    }
+    .pink-star-md {
+        width: 4.00576vw;
+        height: 3.8016vw;
+    }
+    .azil-name-md {
+        width: 32vw; /* ÷ 25 ÷ 2 ÷ 1.2*/
+        height: 15.7vw;
+        margin-bottom: -8vw;
+        position: relative;
+        z-index: 1;
+    }
+    .paolo-name-md {
+        width: 32vw; /* ÷ 25 ÷ 2 ÷ 1.2*/
+        height: 16vw;
+        margin-bottom: -8.3vw;
+        position: relative;
+        z-index: 1;
+    }
+    .ysa-name-md {
+        width: 32vw; /* ÷ 25 ÷ 2 ÷ 1.2*/
+        height: 15.9333333vw;
+        margin-bottom: -8.3vw;
+        position: relative;
+        z-index: 1;
+    }
+    .contributer-md {
+        width: 40vw;
+        height: 40vw;
+        border: 1.2vw solid #FF276E;
+        background-color: #FF276E;
+        border-radius: 1vw;
+    }
+    .m-change-md {
+        margin-top: 5vw;
+    }
+    .contributer-contribution-md {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #27C2FF;
+        text-shadow: #69d5ff 0.6vw 0px 0px;
+        font-size: 7vw;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .references-title-md {
+        margin: 0;
+        font-family: Bobby Jones Soft;
+        color: #FF0B5B;
+        text-shadow: #fea4c6 0.2vw 0px 0px;
+        font-size: 3vw;
+    }
+    .references-md {
+        margin: 0;
+        font-family: Nunito Sans;
+        color: #FF0B5B;
+        font-size: 2vw;
+    }
+}

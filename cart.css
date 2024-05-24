@@ -1,0 +1,396 @@
+@font-face {
+    font-family: Nunito Sans;
+    src: url("files/NunitoSans_10pt-Bold.ttf");
+}
+@font-face {
+    font-family: Bobby Jones Soft;
+    src: url("files/Bobby-Jones-Soft.otf");
+}
+@font-face {
+    font-family: Norwester;
+    src: url("files/Norwester.otf");
+}
+#header {
+    background-color: #FE719F;
+}
+.navbar {
+    justify-content: start;
+    padding: 2vh;
+}
+.selected-tab {
+    background-color: white;
+    color: black !important;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-radius: 1vh;
+}
+#hamburger-menu-wrapper {
+    background-color: #FE719F;
+    padding: 1vw;
+    justify-content: space-around;
+    border-top: 1vw solid #FF4D87;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    max-height: 0;
+}
+.burger-button {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-size: 5vw;
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+.remove-product-bg:hover {
+    cursor: pointer;
+}
+
+.pink-line-md {
+    color: #fe719f;
+    border: 1px solid #fe719f;
+    opacity: 100;
+}
+
+@media (min-height: 1080px) {
+    /*when it looks weird in fullscreen and u gotta change something*/
+    .search-bar-bgh {
+        width: 38% !important;
+    }
+}
+
+@media (min-height: 1180px) {
+    /*change stuff for ipads (why do u have to be so hard apple :\)*/
+    .search-bar-bgh {
+        width: 25% !important;
+    }
+}
+
+
+
+@media (min-width: 1025px) {
+    /*Stuff here is med and above*/
+    .logo-bg {
+        height: 10.008vh;
+        width: 41.424vh;
+    }
+    .search-bar-bg {
+        margin: 1vh;
+        width: 45%;
+        font-size: 3.5vh;
+        border: 0.3vh solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-bg:focus {
+        border: 0.3vh solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-bg {
+        padding: 2vh;
+    }
+    .search-bg {
+        width: 10.8vh;
+        margin-left: -5.5vh;
+    }
+    .search-bg:hover {
+        cursor: pointer;
+    }
+    .tab-button-bg {
+        font-family: "Prompt", sans-serif;
+        font-weight: 300;
+        margin-left: 3vh;
+        font-size: 3vh;
+        text-decoration: none;
+        color: white;
+    }
+    .cart-button-bg {
+        width: 10.8vh;
+        cursor: pointer;
+        margin-left: 3vh;
+    }
+    .hider-bg {
+        display: none;
+    }
+    .d-change-bg {
+        display: flex;
+    }
+    .cart-count-bg {
+        margin-left: -4.2vh;
+        margin-top: -4vh;
+        background-color: #9EB4CD;
+        border-radius: 5vh;
+        padding-left: 1.2vh;
+        padding-right: 1.2vh;
+        font-size: 2.5vh;
+        color: white;
+    }
+    .cart-count-bg-bigger {
+        padding-left: 0.6vh !important;
+        padding-right: 0.6vh !important;
+    }
+    .shopping-icon-bg {
+        width: 6.75vh;
+        height: 8.7vh;
+        margin: 0;
+        margin-top: 1vh;
+        margin-left: 1vh;
+    }
+    .shopping-text-bg {
+        font-family: 'Bobby Jones Soft';
+        color: #D8004E;
+        margin: 0;
+        margin-bottom: -1.5vh;
+        margin-left: 1vh;
+        font-size: 6vh;
+    }
+    .prod-title-bg {
+        font-family: 'Bobby Jones Soft';
+        color: #d2619e;
+        margin: 0;
+        font-size: 3vh;
+        margin-left: 5vh;
+    }
+    .remove-product-bg {
+        width: 4vh;
+        height: 4vh;
+        margin-left: 5vh;
+    }
+    .product-image-bg {
+        width: 31.1666667vh;
+        height: 19.8vh;
+    }
+    .product-mame-bg, .product-price-bg, .product-amount-bg {
+        font-family: 'Bobby Jones Soft';
+        color: #d2619e;
+        margin: 0;
+        font-size: 3vh;
+    }
+    .height-setter-bg {
+        height: 19.8vh;
+        margin-left: 4vh;
+    }
+    .amount-changer-bg {
+        margin-left: 1vh;
+        width: 2vh;
+        height: 2vh;
+        margin-right: 1vh;
+    }
+    .margin-changer {
+        margin-top: 5vh;
+        margin-left: 5vh;
+    }
+    .m-l-c {
+        margin-left: 1vh;
+    }
+    .pink-line-fill {
+        width: 5vh;
+    }
+    .address-label, .name-label, .email-label {
+        font-family: 'Bobby Jones Soft';
+        color: #D8004E;
+        margin: 0;
+        margin-top: 1vh;
+        font-size: 3vh;
+    }
+    .address-input, .name-input, .email-input {
+        width: 55vh;
+        border: 2px solid #FF4D87;
+        border-radius: 10px;
+    }
+    .address-input {
+        height: 30vh;
+    }
+    .checkout-wrapper {
+        margin-top: 3vh;
+        margin-left: 5vh;
+    }
+    .estimated-cost {
+        font-family: 'Bobby Jones Soft';
+        color: #D8004E;
+        margin: 0;
+        margin-top: 1vh;
+        font-size: 3vh;
+    }
+    .order {
+        font-family: 'Bobby Jones Soft';
+        color: white;
+        border: 1px solid #FF4D87;
+        border-radius: 1.5vh;
+        margin-left: 5vh;
+        background-color: #FF0B5B;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-right: 5vh;
+        padding-left: 5vh;
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    /*Stuff here is med and below*/
+    .logo-md {
+        height: 10.008vw;
+        width: 41.424vw;
+    }
+    .search-bar-md {
+        margin: 1vw;
+        width: 25%;
+        font-size: 3.5vw;
+        border: 0.3vw solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-md:focus {
+        border: 0.3vw solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-md {
+        padding: 2vw;
+    }
+    .search-md {
+        width: 10.8vw;
+        margin-left: -5.5vw;
+    }
+    .search-md:hover {
+        width: 11vw;
+        cursor: pointer;
+    }
+    .tab-button-md {
+        display: none;
+    }
+    .cart-button-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    #mobile-menu-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    .d-change-md {
+        display: block;
+    }
+    .cart-count-md {
+        margin-left: -4.2vw;
+        margin-top: -4vw;
+        background-color: #9EB4CD;
+        border-radius: 5vw;
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+        font-size: 2.5vw;
+        color: white;
+    }
+    .cart-count-md-bigger {
+        padding-left: 0.6vw !important;
+        padding-right: 0.6vw !important;
+    }
+    .shopping-icon-md {
+        width: 6.75vw;
+        height: 8.7vw;
+        margin-top: 1vw;
+        margin-left: 1vw;
+    }
+    .shopping-text-md {
+        font-family: 'Bobby Jones Soft';
+        color: #D8004E;
+        margin: 0;
+        margin-bottom: -1.5vw;
+        margin-left: 1vw;
+        font-size: 6vw;
+    }
+    .prod-title-md {
+        font-family: 'Bobby Jones Soft';
+        color: #d2619e;
+        margin: 0;
+        font-size: 2.8vw;
+        margin-left: 4vw;
+    }
+    .remove-product-md {
+        width: 4vw;
+        height: 4vw;
+        margin-left: 4vw;
+    }
+    .product-image-md {
+        width: 31.1666667vw;
+        height: 19.8vw;
+    }
+    .product-mame-md, .product-price-md, .product-amount-md {
+        font-family: 'Bobby Jones Soft';
+        color: #d2619e;
+        margin: 0;
+        font-size: 1.5vh;
+    }
+    .height-setter-md {
+        height: 19.8vw;
+        margin-left: 4vw;
+    }
+    .amount-changer-md {
+        margin-left: 1vw;
+        width: 2vw;
+        height: 2vw;
+        margin-right: 1vw;
+    }
+    .margin-changer {
+        margin-left: 0.5vw;
+        margin-top: 2vw;
+    }
+    .m-l-c {
+        margin-left: 1vw;
+    }
+    .address-label, .name-label, .email-label {
+        font-family: 'Bobby Jones Soft';
+        color: #D8004E;
+        margin: 0;
+        margin-top: 1vw;
+        font-size: 5vw;
+    }
+    .address-input, .name-input, .email-input {
+        width: 90vw;
+        border: 2px solid #FF4D87;
+        border-radius: 5px;
+    }
+    .address-input {
+        height: 30vw;
+    }
+    .checkout-wrapper {
+        margin-top: 3vw;
+    }
+    .estimated-cost {
+        font-family: 'Bobby Jones Soft';
+        color: #D8004E;
+        margin: 0;
+        margin-top: 1vw;
+        font-size: 3vw;
+    }
+    .order {
+        font-family: 'Bobby Jones Soft';
+        color: white;
+        border: 1px solid #FF4D87;
+        border-radius: 1.5vw;
+        background-color: #FF0B5B;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        padding-right: 5vw;
+        padding-left: 5vw;
+        font-size: 2vw;
+    }
+}
+

@@ -1,0 +1,538 @@
+@font-face {
+    font-family: Bobby Jones Soft;
+    src: url("files/Bobby-Jones-Soft.otf");
+}
+@font-face {
+    font-family: Norwester;
+    src: url("files/Norwester.otf");
+}
+#header {
+    background-color: #FE719F;
+}
+.navbar {
+    justify-content: start;
+    padding: 2vh;
+}
+.selected-tab {
+    background-color: white;
+    color: black !important;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-radius: 1vh;
+}
+#hamburger-menu-wrapper {
+    background-color: #FE719F;
+    padding: 1vw;
+    justify-content: space-around;
+    border-top: 1vw solid #FF4D87;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    max-height: 0;
+}
+.burger-button {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-size: 5vw;
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.welcome-wrapper {
+    justify-content: space-evenly;
+    margin-top: 2vw;
+}
+.welcome-text {
+    font-family: "Bobby Jones Soft";
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#goto-about {
+    font-family: "Norwester";
+    background-color: #E3FFFA;
+    margin: 0;
+}
+.products-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.product {
+    border: 5px solid #27C2FF;
+    border-radius: 50px;
+    width: 70%;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    transition: 250ms;
+}
+.product-pink {
+    border: 5px solid #FE719F !important;
+}
+.product-pink:hover {
+    border: 8px solid #af3b62 !important;
+}
+.product:hover {
+    border: 8px solid #157ba3;
+}
+.product p {
+    font-family: "Bobby Jones Soft";
+    margin: 0;
+}
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    display: flex;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    justify-self: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.close {
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+.blocked-product {
+    opacity: 20%;
+}
+@media (min-height: 1080px) {
+    /*when it looks weird in fullscreen and u gotta change something*/
+    .search-bar-bgh {
+        width: 38% !important;
+    }
+    .specials-wrapper {
+        display: block !important;
+    }
+    .special-offer-real-md {
+        margin-left: 1vh !important;
+        width: 144.90566vh !important;
+        height: 74.9433962vh !important;
+    }
+    .special-offer-md {
+        margin-left: 2vh !important;
+        width: 71.1111113vh !important;
+        height: 29.1851852vh !important;
+        margin-top: 2.25vh !important;
+    }
+    #special-offer-button {
+        margin-top: 35vw !important;
+        margin-left: 65vw !important;
+    }
+    .other-specials-wrapper {
+        display: block
+    }
+}
+
+@media (min-height: 1180px) {
+    /*change stuff for ipads (why do u have to be so hard apple :\)*/
+    .search-bar-bgh {
+        width: 25% !important;
+    }
+    .special-offer-real-md {
+        margin-left: 1vw !important;
+        width: 72.4528302vw !important;
+        height: 37.4716981vw !important;
+    }
+    .special-offer-md {
+        margin-left: 2vw !important;
+        width: 71.1111113vw !important;
+        height: 29.1851852vw !important;
+        margin-top: 2.25vw !important;
+    }
+    
+    #special-offer-button {
+        margin-top: 30vw !important;
+        margin-left: 55vw !important;
+    }
+}
+.specials-wrapper {
+    margin-top: 25px;
+}
+@media (min-width: 1025px) {
+    /*Stuff here is med and above*/
+    .logo-bg {
+        height: 10.008vh;
+        width: 41.424vh;
+    }
+    .search-bar-bg {
+        margin: 1vh;
+        width: 45%;
+        font-size: 3.5vh;
+        border: 0.3vh solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-bg:focus {
+        border: 0.3vh solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-bg {
+        padding: 2vh;
+    }
+    .search-bg {
+        width: 10.8vh;
+        margin-left: -5.5vh;
+    }
+    .search-bg:hover {
+        cursor: pointer;
+    }
+    .tab-button-bg {
+        font-family: "Prompt", sans-serif;
+        font-weight: 300;
+        margin-left: 3vh;
+        font-size: 3vh;
+        text-decoration: none;
+        color: white;
+    }
+    .cart-button-bg {
+        width: 10.8vh;
+        cursor: pointer;
+        margin-left: 3vh;
+    }
+    .hider-bg {
+        display: none;
+    }
+    .d-change-bg {
+        display: flex;
+        align-items: center;
+    }
+    .wtt-bg ,.ttt-bg {
+        font-size: 10vh;
+    }
+    .ttt-bg {
+        margin-top: -2vh;
+    }
+    .welcome-bear-bg {
+        width: 61.117056vh; 
+        height: 67.90784vh;
+    }
+    .goto-about-bg {
+        font-size: 3vh;
+        border: 0.3vh solid #978CE8;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        padding-left: 4vh;
+        padding-right: 4vh;
+        border-radius: 3.5vh;
+    }
+    .ttt-toy-bg {
+        color: #27C2FF;
+        text-shadow: 0.25vw 0.25vw #c0edff;
+    }
+    .ttt-topia-bg {
+        color: #FE719F;
+        text-shadow: 0.25vw 0.25vw #ffd6e3;
+    }
+    .star-divider-bg {
+        width: 76.8vh;
+        height: 3.76vh;
+        margin-top: 5vh;
+    }
+    .product-image-bg {
+        width: 37.4vh;
+        height: 23.76vh;
+    }
+    .product-name-bg {
+        font-size: 3.5vh;
+        color: #004BA4;
+    }
+    .product-desc-bg {
+        font-size: 2vh;
+        color: #1976E4;
+    }
+    .product-price-bg {
+        font-size: 3.5vh;
+        color: #004BA4;
+    }
+    .product-rating-bg {
+        width: 10.584vh;
+        height: 1.730925vh;
+        margin-top: -2vh;
+    }
+    .product-review-amount-bg {
+        font-size: 1.2vh;
+        color: #93B4DB;
+    }
+    .add-to-cart-button-bg {
+        width: 10.8vh;
+        height: 10.8vh;
+    }
+    .product-misc-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .circle-divider-bg {
+        width: 76.8vh;
+        height: 3.28vh;
+        margin-top: 5vh;
+    }
+    .cart-count-bg {
+        margin-left: -4.2vh;
+        margin-top: -4vh;
+        background-color: #9EB4CD;
+        border-radius: 5vh;
+        padding-left: 1.2vh;
+        padding-right: 1.2vh;
+        font-size: 2.5vh;
+        color: white;
+    }
+    .cart-count-bg-bigger {
+        padding-left: 0.6vh !important;
+        padding-right: 0.6vh !important;
+    }
+    .popup-content-bg {
+        padding-top: 10vh;
+        padding-left: 10vh;
+        padding-right: 10vh;
+        padding-bottom: 7vh;
+    }
+    .close-bg {
+        font-size: 6vh;
+        margin-right: -6vh;
+        margin-top: -9vh;
+    }
+    .item-popup-bg {
+        font-size: 5vh;
+        font-family: "Bobby Jones Soft";
+    }
+    .special-offer-real-bg {
+        margin-left: 1vh;
+        width: 121.980199vh;
+        height: 63.0866338vh;
+    }
+    .special-offer-bg {
+        margin-left: 2vh;
+        width: 71.1111113vh;
+        height: 29.1851852vh;
+        margin-top: 2.25vh;
+    }
+    #special-offer-button {
+        font-family: "Bobby Jones Soft";
+        font-size: 2.5vh;
+        margin-top: 55vh;
+        margin-left: 90vh;
+        position: absolute;
+        color: white;
+        background-color: #FF4D87;
+        border: 0.3vh solid white;
+        border-radius: 30px;
+        padding: 1vh;
+        padding-left: 3vh;
+        padding-right: 3vh;
+    }
+    .category-name-bg {
+        font-family: "Bobby Jones Soft";
+        font-size: 5vh;
+        margin-top: 2.25vh;
+        margin-bottom: -2.25vh;
+    }
+}
+@media (max-width: 1024px) {
+    /*Stuff here is med and below*/
+    .logo-md {
+        height: 10.008vw;
+        width: 41.424vw;
+    }
+    .search-bar-md {
+        margin: 1vw;
+        width: 25%;
+        font-size: 3.5vw;
+        border: 0.3vw solid #FF4D87;
+        border-radius: 50px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .search-bar-md:focus {
+        border: 0.3vw solid #FF4D87;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 50px;
+    }
+    .navbar-padding-md {
+        padding: 2vw;
+    }
+    .search-md {
+        width: 10.8vw;
+        margin-left: -5.5vw;
+    }
+    .search-md:hover {
+        width: 11vw;
+        cursor: pointer;
+    }
+    .tab-button-md {
+        display: none;
+    }
+    .cart-button-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    #mobile-menu-md {
+        width: 10.8vw;
+        cursor: pointer;
+        margin: 0;
+    }
+    .d-change-md {
+        display: block !important;
+        text-align: center;
+    }
+    .wtt-md ,.ttt-md {
+        font-size: 10vw;
+    }
+    .ttt-md {
+        margin-top: -2vw;
+    }
+    .welcome-bear-md {
+        width: 61.117056vw; 
+        height: 67.90784vw;
+    }
+    .goto-about-bg {
+        font-size: 3vw;
+        border: 0.3vw solid #978CE8;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        border-radius: 3.5vw;
+    }
+    .ttt-toy-md {
+        color: #27C2FF;
+        text-shadow: 0.5vw 0.5vw #c0edff;
+    }
+    .ttt-topia-md {
+        color: #FE719F;
+        text-shadow: 0.5vw 0.5vw #ffd6e3;
+    }
+    .star-divider-md {
+        width: 76.8vw;
+        height: 3.76vw;
+        margin-top: 5vw;
+    }
+    .product {
+        width: 60%;
+    }
+    .product-image-bg {
+        width: 37.4vw;
+        height: 23.76vw;
+    }
+    .product-name-bg {
+        font-size: 3.5vw;
+        color: #004BA4;
+    }
+    .product-desc-bg {
+        font-size: 2vw;
+        color: #1976E4;
+    }
+    .product-price-bg {
+        font-size: 3.5vw;
+        color: #004BA4;
+    }
+    .product-rating-bg {
+        width: 10.584vw;
+        height: 1.730925vw;
+        margin-top: -1vw;
+    }
+    .product-review-amount-bg {
+        font-size: 2vw;
+        color: #93B4DB;
+    }
+    .add-to-cart-button-bg {
+        width: 11.88vw;
+        height: 11.88vw;
+    }
+    .product-misc-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .circle-divider-md {
+        width: 76.8vw;
+        height: 3.28vw;
+        margin-top: 5vw;
+    }
+    .cart-count-md {
+        margin-left: -4.2vw;
+        margin-top: -4vw;
+        background-color: #9EB4CD;
+        border-radius: 5vw;
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+        font-size: 2.5vw;
+        color: white;
+    }
+    .cart-count-md-bigger {
+        padding-left: 0.6vw !important;
+        padding-right: 0.6vw !important;
+    }
+    .popup-content-md {
+        padding-top: 10vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-bottom: 7vw;
+    }
+    .close-md {
+        font-size: 6vw;
+        margin-right: -6vw;
+        margin-top: -9vw;
+    }
+    .item-popup-md {
+        font-size: 5vw;
+        font-family: "Bobby Jones Soft";
+    }
+    .special-offer-real-md {
+        margin-left: 1vw;
+        width: 72.4528302vw;
+        height: 37.4716981vw;
+    }
+    .special-offer-md {
+        margin-left: 2vw;
+        width: 71.1111113vw;
+        height: 29.1851852vw;
+        margin-top: 2.25vw;
+    }
+    #special-offer-button {
+        font-family: "Bobby Jones Soft";
+        font-size: 2.5vw;
+        margin-top: 30vw;
+        margin-left: 55vw;
+        position: absolute;
+        color: white;
+        background-color: #FF4D87;
+        border: 0.3vh solid white;
+        border-radius: 30px;
+        padding: 1vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+    .category-name-md {
+        font-family: "Bobby Jones Soft";
+        font-size: 5vw;
+        margin-top: 2.25vw;
+        margin-bottom: -2.25vw;
+    }
+}

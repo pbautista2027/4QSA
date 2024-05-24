@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="index.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="index.js"></script>
+    </head>
+    <body onload="changeVisibility()">
+        <div id="popup" class="popup">
+            <div class="popup-content popup-content-bg popup-content-md">
+                <p id="item-popup" class="item-popup-bg item-popup-md text-center">X</p>
+                <p id="item-popup-after" class="item-popup-bg item-popup-md text-center">&nbsp;added to cart!</p>
+                <span class="close close-bg close-md">&times;</span>
+            </div>
+        </div>
+        <nav class="navbar navbar-padding-md navbar-padding-bg" id="header">
+            <img class="logo-bg logo-md" src="files/logo.png" draggable="false" alt="">
+            <input id="search-input" class="form-control search-bar-bg search-bar-md search-bar-bgh" type="search" aria-label="Search">
+            <img class="search-bg search-md" src="files/search.png" draggable="false" alt="" onclick="updateProducts()">
+            <a href="#" class="tab-button-bg tab-button-md selected-tab" onclick="switchTab('home')">Home</a>
+            <a href="#" class="tab-button-bg tab-button-md" onclick="switchTab('about')">About</a>
+            <a href="#" class="tab-button-bg tab-button-md" onclick="switchTab('contact-us')">Contact Us</a>
+            <img class="cart-button-bg cart-button-md" src="files/to-cart.png" draggable="false" alt="" onclick="gotoCart()">
+            <p class="cart-count-bg cart-count-md d-none" id="cart-count">0</p>
+            <img class="hider-bg" id="mobile-menu-md" src="files/mobile-menu.png" draggable="false" alt="" onclick="hamburgerFunction()">
+        </nav>
+        <div id="hamburger-menu-wrapper" style="display: none;" class="hider-bg">
+            <a href="#" class="burger-button selected-tab" onclick="switchTab('home')">Home</a>
+            <a href="#" class="burger-button" onclick="switchTab('about')">About</a>
+            <a href="#" class="burger-button" onclick="switchTab('contact-us')">Contact Us</a>            
+        </div>
+        <div class="welcome-wrapper d-change-bg d-change-md">
+            <div>
+                <p class="welcome-text wtt-bg wtt-md">WELCOME TO</p>
+                <p class="welcome-text ttt-bg ttt-md"><span class="ttt-toy-bg ttt-toy-md">TOY</span><span class="ttt-topia-bg ttt-topia-md">TOPIA</span></p>
+                <button id="goto-about" class="goto-about-bg goto-about-md" onclick="switchTab('about')">What are we all about?</button>
+            </div>
+            <br class="hider-bg">
+            <div>
+                <img class="welcome-bear-bg welcome-bear-md" src="files/homepage-bear.png" draggable="false" alt="">
+            </div>
+        </div>
+
+        <div class="text-center"><img class="star-divider-bg star-divider-md" src="files/star-divider.png" draggable="false" alt=""></div>
+       
+        <p class="category-name-bg category-name-md text-center" style="color: #FF4D87;">Barbie-Land</p>
+
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product product-pink text-center container" id="barbieAirplane">
+                    <img class="product-image-bg product-image-md" src="files/products/barbieAirplane.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Barbie Airplane</p>
+                    <p class="product-desc-bg product-desc-md text-center">A pink barbie-themed Airplane. Dolls are sold Separately.</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱229.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('barbieAirplane')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="barbieBD">
+                    <img class="product-image-bg product-image-md" src="files/products/barbieBD.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Baker Barbie Duo</p>
+                    <p class="product-desc-bg product-desc-md text-center">A Barbie celebration WITH A KITCHEN AND ACCESSORIES PLAYSET</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱699.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(4 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('barbieBD')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="barbieSPMRKT">
+                    <img class="product-image-bg product-image-md" src="files/products/barbieSPMRKT.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Supermarket Barbie</p>
+                    <p class="product-desc-bg product-desc-md text-center">BARBIE DOLL SUPERMARKET SET WITH 25 PIECES.</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱449.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('barbieSPMRKT')">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product product-pink text-center container" id="barbieCamper">
+                    <img class="product-image-bg product-image-md" src="files/products/barbieCamper.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Barbie Camper</p>
+                    <p class="product-desc-bg product-desc-md text-center">A BARBIE DREAM CAMPER WITH OVER 60 PIECES PLAYSET</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱799.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('barbieCamper')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="barbieHouse">
+                    <img class="product-image-bg product-image-md" src="files/products/barbieHouse.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Barbie House</p>
+                    <p class="product-desc-bg product-desc-md text-center">A BARBIE DREAM HOUSE WITH 50 PIECES PLAYSET </p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱699.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(3 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('barbieHouse')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="barbieBedroom">
+                    <img class="product-image-bg product-image-md" src="files/products/barbieBedroom.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Barbie Bedroom</p>
+                    <p class="product-desc-bg product-desc-md text-center">A BARBIE DREAM BEDROOM WITH 15 PIECES PLAYSET</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱399.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('barbieBedroom')">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="text-center"><img class="circle-divider-bg circle-divider-md" src="files/blue-circle-divider.png" draggable="false" alt=""></div>
+
+        <p class="category-name-bg category-name-md text-center" style="color: #004BA4;">PEPPA PIG</p>
+
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product text-center container" id="peppaVillSet">
+                    <img class="product-image-bg product-image-md" src="files/products/peppaVillSet.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Beautiful Village Set</p>
+                    <p class="product-desc-bg product-desc-md text-center">A PEPPA PIG WITH FRIENDS VILLA DOLLHOUSE PLAYSET</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱479.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('peppaVillSet')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="peppaPP">
+                    <img class="product-image-bg product-image-md" src="files/products/peppaPP.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Peppa Pig Pack</p>
+                    <p class="product-desc-bg product-desc-md text-center">A peppa pig family Toy pack FOR AGES THREE AND ABOVE.</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱299.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(3 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('peppaPP')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="peppaFW">
+                    <img class="product-image-bg product-image-md" src="files/products/peppaFW.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Ferris Wheel Set</p>
+                    <p class="product-desc-bg product-desc-md text-center">FERRIS WHEEL PEPPA PIG WITH FRIEND ADVENTURE PLAYSET</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱399.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('peppaFW')">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product text-center container" id="peppaPH">
+                    <img class="product-image-bg product-image-md" src="files/products/peppaPH.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Peppa Pig House</p>
+                    <p class="product-desc-bg product-desc-md text-center">A PEPPA PIG FULL HOUSE WITH 17 PIECES PLAYSET</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱449.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('peppaPH')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="peppaFNF">
+                    <img class="product-image-bg product-image-md" src="files/products/peppaFNF.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Peppa Family & Friends</p>
+                    <p class="product-desc-bg product-desc-md text-center">PEPPA PIG FIGURE SET WITH FRIENDS AND GRANDPARENTS</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱299.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(3 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('peppaFNF')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="peppaPS">
+                    <img class="product-image-bg product-image-md" src="files/products/peppaPS.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Peppa Pig School</p>
+                    <p class="product-desc-bg product-desc-md text-center">PEPPA PIG SCHOOL WITH OVER FIFTEEN PIECES</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱399.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('peppaPS')">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="text-center"><img class="star-divider-bg star-divider-md" src="files/star-divider.png" draggable="false" alt=""></div>
+
+        <p class="category-name-bg category-name-md text-center" style="color: #FF4D87;">VEHICLES</p>
+        
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product product-pink text-center container" id="vehicleToyT">
+                    <img class="product-image-bg product-image-md" src="files/products/vehicleToyT.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Toy Truck Carrier</p>
+                    <p class="product-desc-bg product-desc-md text-center">A TWO PIECE TOW TRUCK TOY SET WITH TRUCK AND CAR</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱349.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('vehicleToyT')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="vehicleDT">
+                    <img class="product-image-bg product-image-md" src="files/products/vehicleDT.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Dump Truck Toy</p>
+                    <p class="product-desc-bg product-desc-md text-center">A C.A.T. CONSTRUCTION FLEET DUMP TRUCK TOY</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱299.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(4 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('vehicleDT')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="vehicleCONST">
+                    <img class="product-image-bg product-image-md" src="files/products/vehicleCONST.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Construction Set</p>
+                    <p class="product-desc-bg product-desc-md text-center">A C.A.T. CONSTRUCTION FLEET SET WITH FOUR VEHICLES</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱449.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(3 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('vehicleCONST')">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product product-pink text-center container" id="vehicleTowT">
+                    <img class="product-image-bg product-image-md" src="files/products/vehicleTowT.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Tow Truck</p>
+                    <p class="product-desc-bg product-desc-md text-center">A TWO PIECE TOW TRUCK TOY SET WITH TRUCK AND CAR</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱149.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(4 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('vehicleTowT')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="vehicleFT">
+                    <img class="product-image-bg product-image-md" src="files/products/vehicleFT.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Fire Truck Set</p>
+                    <p class="product-desc-bg product-desc-md text-center">FIRE TRUCK SET WITH LADDERS, FIRE, CONES, AND ETC PIECES.</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱299.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(4 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('vehicleFT')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product product-pink text-center container" id="vehicleCar">
+                    <img class="product-image-bg product-image-md" src="files/products/vehicleCar.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Rideable Car</p>
+                    <p class="product-desc-bg product-desc-md text-center">A RIDEABLE YELLOW AND RED TOY CAR WITH SUPPORT</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱999.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('vehicleCar')">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="text-center"><img class="circle-divider-bg circle-divider-md" src="files/blue-circle-divider.png" draggable="false" alt=""></div>
+
+        <p class="category-name-bg category-name-md text-center" style="color: #004BA4;">BABY SHOWS</p>
+        
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product text-center container" id="cocoFam">
+                    <img class="product-image-bg product-image-md" src="files/products/cocoFam.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Cocomelon Family</p>
+                    <p class="product-desc-bg product-desc-md text-center">COCOMELON FAMILY FIGURE SET WITH FOUR PIECES</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱449.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('cocoFam')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="cocoDoc">
+                    <img class="product-image-bg product-image-md" src="files/products/cocoDoc.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Doctor Melon Set</p>
+                    <p class="product-desc-bg product-desc-md text-center">MEDICAL DOCTOR CHECKUP MELON WITH SOUNDS AND PHRASES </p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱299.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(4 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('cocoDoc')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="cocoMT">
+                    <img class="product-image-bg product-image-md" src="files/products/cocoMT.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Coco Musical Train</p>
+                    <p class="product-desc-bg product-desc-md text-center">A COCOMELON MUSICAL TRAIN SET WITH SONGS</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱499.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('cocoMT')">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <div class="products-wrapper d-change-bg d-change-md">
+            <div class="col-xl-4 col-xxl-12 product-wrapper">
+                <div class="product text-center container" id="cocoMP">
+                    <img class="product-image-bg product-image-md" src="files/products/cocoMP.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Cocomelon Mini Plush</p>
+                    <p class="product-desc-bg product-desc-md text-center">COCOMELON MINI PLUSH SET WITH EIGHT PIECES</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱449.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(2 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('cocoMP')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="cocoLB">
+                    <img class="product-image-bg product-image-md" src="files/products/cocoLB.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Learning Bus</p>
+                    <p class="product-desc-bg product-desc-md text-center">COCOMELON MUSICAL LEARNING BUS WITH SONGS</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱399.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(3 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('cocoLB')">
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <br class="hider-bg">
+            <div class="col-xl-4 col-xxl-6 product-wrapper">
+                <div class="product text-center container" id="cocoBath">
+                    <img class="product-image-bg product-image-md" src="files/products/cocoBath.png" draggable="false" alt="">
+                    <p class="product-name-bg product-name-md text-center">Cocomelon Bath</p>
+                    <p class="product-desc-bg product-desc-md text-center">COCOMELON MUSICAL BATHROOM BATH TIME SET</p>
+                    <div class="product-misc-wrapper">
+                        <div class="product-misc-bg product-misc-md">
+                            <p class="product-price-bg product-price-md">₱299.99</p>
+                            <img class="product-rating-bg product-rating-md" src="files/stars.png" draggable="false" alt="">
+                            <p class="product-review-amount-bg product-review-amount-md">(4 Reviews)</p>
+                        </div>
+                        <div class="product-add-to-cart-wrapper">
+                            <img class="add-to-cart-button-bg add-to-cart-button-md" src="files/cart-button.png" draggable="false" alt="" style="cursor: pointer;" onclick="addToCart('cocoBath')">
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        <div class="text-center"><img class="circle-divider-bg circle-divider-md" src="files/circle-divider.png" draggable="false" alt=""></div>
+
+        <button id="special-offer-button" class="text-center" onclick="addToCart('buildingBlocks')">add to cart now!</button>
+        <div class="specials-wrapper d-change-bg d-change-md text-center">
+            <img class="special-offer-real-bg special-offer-real-md" src="files/products/bricks.png" draggable="false" alt="">
+            <div class="other-specials-wrapper">
+                <img class="special-offer-bg special-offer-md" src="files/40-percent.png" draggable="false" alt="">
+                <img class="special-offer-bg special-offer-md" src="files/lab-tested.png" draggable="false" alt="">
+            </div>
+        </div>
+
+        <div class="product d-none" id="buildingBlocks">
+            <p class="product-name-bg">Building Blocks</p>
+            <div class="product-misc-wrapper">
+                <div class="product-misc-bg product-misc-md">
+                    <p class="product-price-bg product-price-md">₱449.99</p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </body>
+</html>
